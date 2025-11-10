@@ -172,13 +172,13 @@ Follow the prompts on the CLI to interact with the Floor Plan Management System.
 
 ### Output Screenshots
 
-(images/demo1.png)
+![Springboot](images/demo1.png)
 
-(images/demo2.png)
+![Floor Plan Creation](images/demo2.png)
 
-(images/demo3.png)
+![View Floor Plan](images/demo3.png)
 
-(images/demo4.png)
+![Room recommendation](images/demo4.png)
 
-(images/demo5.png)
+![Book room](images/demo5.png)
 
