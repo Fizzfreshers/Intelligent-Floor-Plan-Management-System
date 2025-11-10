@@ -146,7 +146,7 @@ The backend will run on http://localhost:8080.
 
 ### Steps
 
-In a second terminal, navigate to your frontend (or floorplan-cli) folder:
+In a second terminal, navigate to your `frontend (or floorplan-cli)` folder:
 
 ```bash
 # Go to the frontend directory
@@ -168,7 +168,7 @@ pip install requests tabulate colorama
 python floorplan_cli.py
 ```
 
-Follow the prompts to interact with the Floor Plan Management System.
+Follow the prompts on the CLI to interact with the Floor Plan Management System.
 
-Output Screenshots
+### Output Screenshots
 
