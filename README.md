@@ -172,3 +172,13 @@ Follow the prompts on the CLI to interact with the Floor Plan Management System.
 
 ### Output Screenshots
 
+(images/demo1.png)
+
+(images/demo2.png)
+
+(images/demo3.png)
+
+(images/demo4.png)
+
+(images/demo5.png)
+
