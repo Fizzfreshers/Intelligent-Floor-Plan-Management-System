@@ -37,7 +37,7 @@ This project was built to satisfy all core evaluation criteria from the assignme
 
 Robust user authentication is implemented at the API controller level. A simple but effective role-based check ensures that only a user with the username `"admin"` can access the destructive `saveNewVersion` endpoint. All other users will be rejected with a clear message, fulfilling the "secure access" requirement.
 
-![Static Authentication in Spring Boot Controller](images/Untitled%201.png)
+![Static Authentication in Spring Boot Controller](images/Untitled1.png)
 
 <p align="center">Ensuring only admin can save a new floor plan version</p>
 
@@ -61,7 +61,7 @@ The system is designed to be fault-tolerant and maintain data integrity.
 -   **Database Integrity**: By using Spring Data JPA, all database operations are transactional. If a booking fails validation halfway through (e.g., `JsonProcessingException`), the transaction is rolled back, and no new (corrupt) history entry is saved. This acts as our primary recovery strategy.
 -   **Data Model**: The database entity `FloorPlanHistory` uses `@Column(nullable = false)` to enforce data integrity at the database level, preventing `null` data from being saved.
 
-![FloorPlanHistory Entity with Data Integrity](images/Untitled%202.png)
+![FloorPlanHistory Entity with Data Integrity](images/Untitled2.png)
 
 <p align="center">The table defined using <code>@Entity</code> which defines the datatypes of all columns</p>
 
@@ -76,7 +76,7 @@ The Java backend is built entirely on OOPS principles for structured, modular, a
     3.  `FloorPlanRepository` (Data Access Layer)
 This separation means each class has a single responsibility and is highly modular.
 
-![OOPS 3-Tier Architecture Package Structure](images/Untitled%203.png)
+![OOPS 3-Tier Architecture Package Structure](images/Untitled3.png)
 
 <p align="center">Project structure of the backend</p>
 
@@ -106,13 +106,13 @@ A robust error-handling framework provides clear feedback to the user.
 
 -   **Backend**: The `FloorPlanService` wraps all booking logic in a `try-catch` block. On failure, it returns a descriptive error string. The `FloorPlanController` catches this string and returns the appropriate HTTP status code (`200 OK` for success, `400 Bad Request` for failure).
 
-![Backend Service Error Handling](images/Untitled%204.png)
+![Backend Service Error Handling](images/Untitled4.png)
 
 <p align="center">Handling exceptions in the backend service</p>
 
 -   **Frontend**: The Python CLI checks the `response.status_code` after every API call. If the status is not 200, it prints a red error message to the user, providing immediate and clear feedback.
 
-![Frontend CLI Error Handling](images/Untitled%205.png)
+![Frontend CLI Error Handling](images/Untitled5.png)
 
 <p align="center">Handling backend responses in the CLI</p>
 
